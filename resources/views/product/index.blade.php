@@ -128,5 +128,4 @@
     </div>
 
     <script src="{{ asset('js/product.js') }}"></script>
-
 @endsection
