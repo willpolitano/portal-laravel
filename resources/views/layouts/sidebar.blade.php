@@ -1,3 +1,5 @@
+<link rel="stylesheet" href={{ asset('css/sidebar.css') }}>
+
 <nav id="sidebar">
     <div class="custom-menu">
         <button type="button" id="sidebarCollapse" class="btn btn-primary">
@@ -11,13 +13,13 @@
             <li class="link-menu {{Route::current()->uri() == 'home' ? 'active' : null}}">
                 <a href="{{ route('home') }} ">Home</a>
             </li>
-            <li class="link-menu {{Route::current()->uri() == 'product' ? 'active' : null}}">
+            <li class="link-menu {{Route::current()->uri() == 'produtos' ? 'active' : null}}">
                 <a href=" {{ route('products.index') }} ">Product</a>
             </li>
-            <li class="link-menu {{Route::current()->uri() == 'client' ? 'active' : null}}">
+            <li class="link-menu {{Route::current()->uri() == 'clientes' ? 'active' : null}}">
                 <a href="#">Client</a>
             </li>
-            <li class="link-menu {{Route::current()->uri() == 'provider' ? 'active' : null}}">
+            <li class="link-menu {{Route::current()->uri() == 'fonecedores' ? 'active' : null}}">
                 <a href="#">Provider</a>
             </li>
             <li>
@@ -40,4 +42,7 @@
         </ul>
     </div>
 </nav>
+
+<script src="{{ asset('js/sidebar.js') }}"></script>
+
 

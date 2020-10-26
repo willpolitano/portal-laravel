@@ -18,7 +18,7 @@
                     <td>{{ $product->price }}</td>
                     <td class="text-primary text-center"><i class="fa fa-external-link-square" id="view-product"></i></td>
                     <td class="text-secondary text-center"><i class="fa fa-pencil-square" id="edit-product" data-id="{{$product->id }}"></i></td>
-                    <td class="text-danger text-center"><i class="fa fa-trash" id="delete-product"></i></td>
+                    <td class="text-danger text-center"><i class="fa fa-trash" id="delete-product" data-id="{{$product->id }}"></i></td>
                 </tr>
             @endforeach
         </tbody>
@@ -40,17 +40,17 @@
                 <div class="modal-body text-dark">
                     <div class="form-group">
                         <label for="name">Name product</label>
-                        <input type="text" name="name" class="form-control">
+                        <input type="text" name="name" class="form-control" disabled="disabled">
                     </div>
 
                     <div class="form-group">
                         <label for="price">Price product</label>
-                        <input type="text" name="price" class="form-control" id="money">
+                        <input type="text" name="price" class="form-control" id="money" disabled="disabled">
                     </div>
 
                     <div class="form-group">
                         <label for="description">Description product</label>
-                        <textarea class="form-control" name="description" rows="3"></textarea>
+                        <textarea class="form-control" name="description" rows="3" disabled="disabled"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -100,55 +100,32 @@
         </div>
     </div>
 
-    <script>
+    <div id="modal-delete-product" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title text-light">Delete product</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-dark">
+                    <h5>Want to delete this product?</h5>
 
-        $('#content').on('click', '#view-product', function() {
+                    <form action="" method="POST" name="form-delete-product">
+                        @csrf
+                        @method('DELETE')
 
-            var name = $(this).closest('tr').find('td').eq(0).text();
-            var description = $(this).closest('tr').find('td').eq(1).text();
-            var price = $(this).closest('tr').find('td').eq(2).text();
+                        <input type="hidden" name="idProduct">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-delete-product">Delete</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            $('#modal-view-product').find("input[name='name']").val(name);
-            $('#modal-view-product').find("input[name='price']").val(price);
-            $('#modal-view-product').find("textarea[name='description']").html(description);
-            $('#modal-view-product').modal('show');
-        });
-
-        $('#content').on('click', '#edit-product', function() {
-
-            var idProduct = $(this).attr('data-id');
-            var name = $(this).closest('tr').find('td').eq(0).text();
-            var price = $(this).closest('tr').find('td').eq(2).text();
-            var description = $(this).closest('tr').find('td').eq(1).text();
-
-            $('#modal-edit-product').find("input[name='idProduct']").val(idProduct);
-            $('#modal-edit-product').find("input[name='name']").val(name);
-            $('#modal-edit-product').find("input[name='price']").val(price);
-            $('#modal-edit-product').find("textarea[name='description']").html(description);
-            $('#modal-edit-product').modal('show');
-        });
-
-        $('#content').on('click', '.btn-update-product', function() {
-
-            var idProduct = $('#modal-edit-product').find("input[name='idProduct']").val();
-
-            $.ajax({
-                url: "produtos/" + idProduct,
-                type: "PUT",
-                data: $('form[name="form-update-product"]').serialize(),
-                dataType: "json"
-
-            }).done(function(resposta) {
-                alert('foi');
-
-            }).fail(function() {
-                alert('falhou');
-
-            }).always(function() {
-                alert('terminou');
-            });
-        });
-
-
-    </script>
+    <script src="{{ asset('js/product.js') }}"></script>
 @endsection
