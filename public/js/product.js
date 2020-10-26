@@ -69,6 +69,22 @@ $('#content').on('click', '.btn-delete-product', function() {
     });
 });
 
+$('#content').on('click', '.btn-save-product', function() {
+
+    $.ajax({
+        url: "produtos",
+        type: "POST",
+        data: $('form[name="form-include-product"]').serialize(),
+        dataType: "json"
+
+    }).done(function(request) {
+        $('#modal-include-product').modal('hide');
+        closeModal();
+    }).fail(function() {
+    }).always(function() {
+    });
+});
+
 function closeModal() {
     var url = window.location.href;
     window.location.href = url;

@@ -24,6 +24,10 @@
         </tbody>
     </table>
 
+    <div class="float-right">
+        <button type="button" class="btn btn-warning btn-include-product" data-toggle="modal" data-target="#modal-include-product">New product</button>
+    </div>
+
     <div class="row d-flex justify-content-center">
         {{ $products->links("pagination::bootstrap-4") }}
     </div>
@@ -94,6 +98,43 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success btn-update-product">Save</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-include-product" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title">Include product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-dark">
+                    <form action="" method="POST" name="form-include-product">
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="name">Name product</label>
+                            <input type="text" name="name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price product</label>
+                            <input type="text" name="price" class="form-control" id="money">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description product</label>
+                            <textarea class="form-control" name="description" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-save-product">Save</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
