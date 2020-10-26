@@ -10901,6 +10901,7 @@ a.text-dark:focus {
 #content {
     width: 100%;
     padding: 80px 20px 20px 20px;
+    background-color: #f1f2f7;
 }
 
 

@@ -50,7 +50,7 @@
 #sidebar ul li a {
     padding: 10px 0;
     display: block;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-weight: bolder;
 }
@@ -160,4 +160,8 @@ a[data-toggle="collapse"] {
 
 .wrapper {
     width: 100%;
+}
+
+.fa-sidebar {
+    margin-right: 16px;
 }
