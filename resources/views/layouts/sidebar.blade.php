@@ -17,7 +17,7 @@
                 <a href=" {{ route('products.index') }} "><i class="fa fa-tasks fa-sidebar"></i> Product</a>
             </li>
             <li class="link-menu {{ Route::current()->uri() == 'clientes' ? 'active' : null }} ">
-                <a href="#"> <i class="fa fa-address-card fa-sidebar"></i> Client</a>
+                <a href=" {{ route('clients.index') }} "> <i class="fa fa-address-card fa-sidebar"></i> Client</a>
             </li>
             <li class="link-menu {{ Route::current()->uri() == 'compras' ? 'active' : null }} ">
                 <a href="#"><i class="fa fa-shopping-cart fa-sidebar"></i> Shopping</a>
