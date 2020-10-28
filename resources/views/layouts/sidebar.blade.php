@@ -23,7 +23,7 @@
                 <a href="#"><i class="fa fa-shopping-cart fa-sidebar"></i> Shopping</a>
             </li>
             <li class="link-menu {{ Route::current()->uri() == 'fonecedores' ? 'active' : null }} ">
-                <a href="#"><i class="fa fa-truck fa-sidebar"></i> Provider</a>
+                <a href=" {{ route('providers.index') }} "><i class="fa fa-truck fa-sidebar"></i> Provider</a>
             </li>
             <li>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> <i class="fa fa-usd fa-sidebar"></i> Financial</a>
