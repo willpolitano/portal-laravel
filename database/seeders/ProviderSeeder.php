@@ -5,183 +5,211 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ContactSeeder extends Seeder
+class ProviderSeeder extends Seeder
 {
-
     public function run()
     {
-        DB::table("contacts")->insert([
+        DB::table("providers")->insert([
             [
-                "client_id" => "1",
-                "telephone" => "75676803",
+                "name" => "Skinte",
+                "cnpj" => "48177416000106",
+                "address" => "8 Beilfuss Trail",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "2",
-                "telephone" => "91836487",
+                "name" => "Edgewire",
+                "cnpj" => "67535976000130",
+                "address" => "274 Lawn Point",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "3",
-                "telephone" => "22744724",
+                "name" => "Zoonder",
+                "cnpj" => "61550063000106",
+                "address" => "57009 Jackson Street",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "4",
-                "telephone" => "22363008",
+                "name" => "Voolith",
+                "cnpj" => "94935371000109",
+                "address" => "5272 Kedzie Circle",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "5",
-                "telephone" => "16244288",
+                "name" => "Fivechat",
+                "cnpj" => "43043158000151",
+                "address" => "19576 Kings Terrace",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "6",
-                "telephone" => "75800772",
+                "name" => "Flipopia",
+                "cnpj" => "98631480000193",
+                "address" => "57 Pawling Pass",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "7",
-                "telephone" => "81016541",
+                "name" => "Twitterworks",
+                "cnpj" => "66344466000112",
+                "address" => "1 Porter Place",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "8",
-                "telephone" => "37939532",
+                "name" => "Linkbridge",
+                "cnpj" => "99505487000121",
+                "address" => "03 Buhler Court",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "9",
-                "telephone" => "27935997",
+                "name" => "Mita",
+                "cnpj" => "77022970000112",
+                "address" => "5668 Blaine Plaza",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "10",
-                "telephone" => "81664529",
+                "name" => "Zoomzone",
+                "cnpj" => "03286421000119",
+                "address" => "855 Commercial Court",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "11",
-                "telephone" => "37210998",
+                "name" => "Yacero",
+                "cnpj" => "00947790000117",
+                "address" => "910 Orin Circle",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "11",
-                "telephone" => "38570265",
+                "name" => "Zooveo",
+                "cnpj" => "51262522000100",
+                "address" => "91 Northwestern Road",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "10",
-                "telephone" => "57384163",
+                "name" => "Thoughtstorm",
+                "cnpj" => "31107308000164",
+                "address" => "Terrace",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "1",
-                "telephone" => "67647679",
+                "name" => "Photofeed",
+                "cnpj" => "26401743000167",
+                "address" => "380 Aberg Circle",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "1",
-                "telephone" => "77751539",
+                "name" => "Meevee",
+                "cnpj" => "73085302000183",
+                "address" => "84200 Buena Vista Junction",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "3",
-                "telephone" => "56006731",
+                "name" => "Kwilith",
+                "cnpj" => "64203010000107",
+                "address" => "30203 Menomonie Parkway",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "15",
-                "telephone" => "95014063",
+                "name" => "Yoveo",
+                "cnpj" => "52758903000130",
+                "address" => "6 Browning Hill",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "19",
-                "telephone" => "59747832",
+                "name" => "Dabshots",
+                "cnpj" => "13909756000108",
+                "address" => "070 Prairie Rose Terrace",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "29",
-                "telephone" => "34637571",
+                "name" => "Skynoodle",
+                "cnpj" => "73537806000197",
+                "address" => "41 Dayton Trail",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "28",
-                "telephone" => "75363394",
+                "name" => "Edgeify",
+                "cnpj" => "85165183000158",
+                "address" => "6164 Brickson Park Court",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "7",
-                "telephone" => "63498346",
+                "name" => "Rhybox",
+                "cnpj" => "23307971000184",
+                "address" => "8 Dayton Drive",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "27",
-                "telephone" => "42658880",
+                "name" => "Tavu",
+                "cnpj" => "12990106000169",
+                "address" => "1 Buhler Point",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "26",
-                "telephone" => "35756940",
+                "name" => "Voolia",
+                "cnpj" => "46174731000154",
+                "address" => "57594 Homewood Hill",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "16",
-                "telephone" => "85356579",
+                "name" => "Photobug",
+                "cnpj" => "33948645000100",
+                "address" => "72102 Homewood Road",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "16",
-                "telephone" => "96561269",
+                "name" => "Avaveo",
+                "cnpj" => "12285857000184",
+                "address" => "2941 Northport Park",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "3",
-                "telephone" => "16118427",
+                "name" => "Meeveo",
+                "cnpj" => "12838230000103",
+                "address" => "805 Iowa Center",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "6",
-                "telephone" => "28861202",
+                "name" => "Edgeify",
+                "cnpj" => "04789043000159",
+                "address" => "6 Packers Point",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "8",
-                "telephone" => "16048335",
+                "name" => "Tagpad",
+                "cnpj" => "21066510000131",
+                "address" => "816 Independence Road",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ],
             [
-                "client_id" => "10",
-                "telephone" => "38412434",
+                "name" => "Gigashots",
+                "cnpj" => "74793301000156",
+                "address" => "01159 Hansons Place",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s")
             ]
