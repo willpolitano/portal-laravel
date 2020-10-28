@@ -20,9 +20,9 @@
                 <a href=" {{ route('clients.index') }} "> <i class="fa fa-address-card fa-sidebar"></i> Client</a>
             </li>
             <li class="link-menu {{ Route::current()->uri() == 'compras' ? 'active' : null }} ">
-                <a href="#"><i class="fa fa-shopping-cart fa-sidebar"></i> Shopping</a>
+                <a href=""><i class="fa fa-shopping-cart fa-sidebar"></i> Shopping</a>
             </li>
-            <li class="link-menu {{ Route::current()->uri() == 'fonecedores' ? 'active' : null }} ">
+            <li class="link-menu {{ Route::current()->uri() == 'fornecedores' ? 'active' : null }} ">
                 <a href=" {{ route('providers.index') }} "><i class="fa fa-truck fa-sidebar"></i> Provider</a>
             </li>
             <li>

@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
             ClientSeeder::class,
             ContactSeeder::class,
             ProviderSeeder::class,
+            PaymentSeeder::class,
+            ShoppingSeeder::class,
+            ShoppingProductSeeder::class,
         ]);
     }
 }
