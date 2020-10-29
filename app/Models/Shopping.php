@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Shopping extends Model
 {
     use HasFactory;
+
+    public function payment()
+    {
+        return $this->hasOne('App\Models\Payment', 'id', 'payment_id');
+    }
+
+    public function client()
+    {
+        return $this->hasOne('App\Models\Client', 'id', 'client_id');
+    }
 }

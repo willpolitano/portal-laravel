@@ -28,8 +28,8 @@
             <li>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> <i class="fa fa-usd fa-sidebar"></i> Financial</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li class="link-menu {{ Route::current()->uri() == 'all' ? 'active' : null }} ">
-                        <a href="#"><i class="fa fa-usd fa-sidebar"></i> All</a>
+                    <li class="link-menu {{ Route::current()->uri() == 'financeiro' ? 'active' : null }} ">
+                        <a href=" {{ route('financials.index') }}"><i class="fa fa-usd fa-sidebar"></i> All</a>
                     </li>
                     <li class="link-menu {{ Route::current()->uri() == 'get' ? 'active' : null }} ">
                         <a href="#"><i class="fa fa-usd fa-sidebar"></i> Get</a>
