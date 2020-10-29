@@ -2,25 +2,6 @@
 
 @section('content')
 
-<style>
-
-.btn-more-info {
-    border-radius: 50%;
-    margin-left: -20px;
-}
-
-.fa-plus-circle {
-    font-size: 18px;
-    width: 40px;
-    color: gray;
-}
-
-.th-client {
-    padding-left: 35px;
-}
-
-</style>
-
     <table class="table table-hover bg-light">
         <thead class="thead-dark">
             <tr>
