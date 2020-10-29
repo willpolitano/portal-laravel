@@ -19,10 +19,6 @@
     padding-left: 35px;
 }
 
-.div-less-info {
-    height: 100px;
-}
-
 </style>
 
     <table class="table table-hover bg-light">
@@ -39,27 +35,24 @@
         <tbody>
 
             @foreach ($shoppings as $shopping)
-                <tr class="div-more-info">
+                <tr>
                     <td>
-                        <span class="btn-more-info"><i class="fa fa-plus-circle"></i></span>
+                        <span class="btn-more-info collapsed" data-toggle="collapse" href="#collapse{{$shopping->id}}"><i class="fa fa-plus-circle"></i></span>
                         {{ $shopping->client->name }}
                     </td>
                     <td> <span class="cnpj">{{ $shopping->client->cnpj }}<span></td>
                     <td> {{ $shopping->client->address }} </td>
                     <td> {{ $shopping->payment->name }} </td>
-                    <td> {{ $shopping->value }}</td>
-                    <td> {{ $shopping->created_at }}</td>
+                    <td> {{ $shopping->value }} </td>
+                    <td> {{ $shopping->created_at }} </td>
                 </tr>
-                <tr class="div-less-info">
-                    <td>
-                        <span class="btn-more-info"><i class="fa fa-plus-circle"></i></span>
-                        {{ $shopping->client->name }}
+                <tr class="div-less-info collapse in p-3" id="collapse{{$shopping->id}}">
+                    <td colspan="6">
+                        <div class="row">
+                            <div class="col">label</div>
+                            <div class="col">value 1</div>
+                        </div>
                     </td>
-                    <td> <span class="cnpj">{{ $shopping->client->cnpj }}<span></td>
-                    <td> {{ $shopping->client->address }} </td>
-                    <td> {{ $shopping->payment->name }} </td>
-                    <td> {{ $shopping->value }}</td>
-                    <td> {{ $shopping->created_at }}</td>
                 </tr>
             @endforeach
         </tbody>
