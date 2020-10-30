@@ -3,7 +3,7 @@
     margin-left: -20px;
 }
 
-.fa-plus-circle {
+.fa-plus-circle, .fa-minus-circle {
     font-size: 18px;
     width: 40px;
     color: gray;

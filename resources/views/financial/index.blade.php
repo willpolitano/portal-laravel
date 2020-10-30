@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <link rel="stylesheet" href={{ asset('css/financial.css') }}>
+
     <table class="table table-hover bg-light">
         <thead class="thead-dark">
             <tr>
