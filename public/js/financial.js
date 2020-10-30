@@ -2,11 +2,11 @@ $(document).ready(function() {
 
     $('.cnpj').mask('99.999.999/9999-99');
 
-    $('.fa-plus-circle').click(function() {
+    $('#content').on('click', '.fa-plus-circle', function() {
         $(this).removeClass().addClass('fa fa-minus-circle');
     });
 
-    $('.fa-minus-circle').click(function() {
+    $('#content').on('click', '.fa-minus-circle', function() {
         $(this).removeClass().addClass('fa fa-plus-circle');
     });
 
