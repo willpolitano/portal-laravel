@@ -18,4 +18,9 @@ class Shopping extends Model
     {
         return $this->hasOne('App\Models\Client', 'id', 'client_id');
     }
+
+    public function product()
+    {
+        return $this->BelongsToMany('App\Models\Product', 'shoppings_products', 'shopping_id', 'product_id')->withPivot('amount');
+    }
 }

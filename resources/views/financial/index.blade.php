@@ -30,9 +30,36 @@
                 <tr class="div-less-info collapse in p-3" id="collapse{{$shopping->id}}">
                     <td colspan="6">
                         <div class="row">
-                            <div class="col">label</div>
-                            <div class="col">value 1</div>
+                            <div class="col-2"></div>
+                            <div class="col-2"><strong>Products</strong></div>
+                            <div class="col-4"></div>
+                            <div class="col-2"><strong>Qtdes</strong></div>
                         </div>
+                        <hr>
+
+                        @if (count($shopping->product) > 0)
+
+                            @foreach ($shopping->product as $product)
+
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col-2"> {{ $product->name }} </div>
+                                    <div class="col-4"></div>
+                                    <div class="col-2"> {{ $product->pivot->amount }} </div>
+                                </div>
+
+                            @endforeach
+
+                        @else
+
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col-2"> No product </div>
+                                <div class="col-4"></div>
+                                <div class="col-2"> No amount </div>
+                            </div>
+
+                        @endif
                     </td>
                 </tr>
             @endforeach
