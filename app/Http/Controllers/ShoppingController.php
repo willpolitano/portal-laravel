@@ -3,12 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Client;
+use App\Models\Payment;
+use App\Models\Product;
 
 class ShoppingController extends Controller
 {
     public function index()
     {
-        return view('shopping.index');
+        $clients = Client::all();
+        $payments = Payment::all();
+        $products = Product::all();
+
+        return view('shopping.index', compact('clients', 'payments', 'products'));
     }
 
     public function create()
