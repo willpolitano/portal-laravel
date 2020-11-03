@@ -17,6 +17,7 @@ $('#content').on('click', '.btn-save-shopping', function() {
         dataType: "json"
 
     }).done(function(request) {
+        location.reload();
     }).fail(function() {
     }).always(function() {
     });

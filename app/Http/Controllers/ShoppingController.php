@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 use App\Models\Payment;
 use App\Models\Product;
+use App\Models\Shopping;
+use App\Models\Shoppings_Products;
 
 class ShoppingController extends Controller
 {
@@ -25,7 +27,28 @@ class ShoppingController extends Controller
 
     public function store(Request $request)
     {
-        echo 'foi';
+        $shopping = new Shopping();
+        $shopping->client_id = $request->input('client');
+        $shopping->payment_id = $request->input('payment');
+        $shopping->value = $request->input('value');
+        $shopping->save();
+        $idShopping = $shopping->id;
+
+        $products = $request->input('product');
+        $amounts = $request->input('amount');
+
+        if(count($products) > 0) {
+
+            foreach($products as $index => $item) {
+                $product = new Shoppings_Products();
+                $product->product_id = $item;
+                $product->shopping_id = $idShopping;
+                $product->amount = $amounts[$index];
+                $product->save();
+            }
+        }
+
+        return true;
     }
 
     public function show($id)

@@ -34,7 +34,7 @@
 
             <div class="form-group col-md-2">
                 <label for="value">Value</label>
-                <input type="number" class="form-control" name="value" id="value" readonly>
+                <input type="number" class="form-control" name="value" id="value" value="100">
             </div>
 
         </div>
