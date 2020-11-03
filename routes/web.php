@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\FinancialController;
+use App\Http\Controllers\ShoppingController;
 
 Route::get('/', function () {
     return redirect('/home');
@@ -21,4 +22,7 @@ Route::resource('/clientes', ClientController::class)->names('clients');
 Route::resource('/fornecedores', ProviderController::class)->names('providers');
 
 Route::resource('/financeiro', FinancialController::class)->names('financials');
+
+Route::resource('/compras', ShoppingController::class)->names('shoppings');
+
 
