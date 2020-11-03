@@ -4,13 +4,14 @@
 
     <link rel="stylesheet" href={{ asset('css/shopping.css') }}>
 
-    <form>
+    <form name="form-save-shopping" action="">
+        @csrf
 
         <div class="row">
 
             <div class="form-group col-md-4">
                 <label for="client">Client</label>
-                <select id="client" class="form-control">
+                <select class="form-control"  id="client" name="client">
                     <option></option>
 
                     @foreach ($clients as $client)
@@ -22,7 +23,7 @@
 
             <div class="form-group col-md-4">
                 <label for="payment">Payment</label>
-                <select id="payment" class="form-control">
+                <select class="form-control" id="payment" name="payment">
                     <option></option>
 
                     @foreach ($payments as $payment)
@@ -33,7 +34,7 @@
 
             <div class="form-group col-md-2">
                 <label for="value">Value</label>
-                <input type="number" class="form-control" id="value" readonly>
+                <input type="number" class="form-control" name="value" id="value" readonly>
             </div>
 
         </div>
@@ -42,7 +43,7 @@
 
             <div class="form-group col-md-5">
                 <label for="product">Product</label>
-                <select id="product" class="form-control">
+                <select class="form-control" name="product[]" id="product">
                     <option></option>
 
                     @foreach ($products as $product)
@@ -53,26 +54,28 @@
 
             <div class="form-group col-md-2">
                 <label for="amount">Amount</label>
-                <input type="number" class="form-control" id="amount">
+                <input type="number" class="form-control" name="amount[]" id="amount">
             </div>
 
             <div class="col-md-1 offset-md-1">
-                <i class="fa fa-plus fa-shopping" aria-hidden="true"></i>
+                <i class="fa fa-plus fa-shopping"></i>
             </div>
 
             <div class="col-md-1">
-                <i class="fa fa-trash fa-shopping" aria-hidden="true"></i>
+                <i class="fa fa-trash fa-shopping"></i>
             </div>
 
         </div>
 
-        <div class="row">
-            <div class="form-group col-md-1">
-                <button type="submit" class="btn btn-primary">Register</button>
-            <div>
-        </div>
-
     </form>
+
+    <div class="row">
+        <div class="form-group col-md-1">
+            <button type="submit" class="btn btn-primary btn-save-shopping">Register</button>
+        <div>
+    </div>
+
+    <script src="{{ asset('js/shopping.js') }}"></script>
 
 @endsection
 

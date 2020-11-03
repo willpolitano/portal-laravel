@@ -25,7 +25,7 @@ class ShoppingController extends Controller
 
     public function store(Request $request)
     {
-        //
+        echo 'foi';
     }
 
     public function show($id)
