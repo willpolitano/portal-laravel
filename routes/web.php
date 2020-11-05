@@ -11,18 +11,20 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::get('/home', function() {
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', function() {
     return view('layouts.home');
 })->name('home');
 
-Route::resource('/produtos', ProductController::class)->names('products');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/produtos', ProductController::class)->names('products');
 
-Route::resource('/clientes', ClientController::class)->names('clients');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/clientes', ClientController::class)->names('clients');
 
-Route::resource('/fornecedores', ProviderController::class)->names('providers');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/fornecedores', ProviderController::class)->names('providers');
 
-Route::resource('/financeiro', FinancialController::class)->names('financials');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/financeiro', FinancialController::class)->names('financials');
 
-Route::resource('/compras', ShoppingController::class)->names('shoppings');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/compras', ShoppingController::class)->names('shoppings');
 
-
+Route::middleware(['auth:sanctum', 'verified'])->middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
