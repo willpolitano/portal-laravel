@@ -1,10 +1,115 @@
 @extends('layouts.app')
 
 @section('content')
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis risus sed vulputate odio ut enim. Aliquam purus sit amet luctus venenatis. Massa placerat duis ultricies lacus sed turpis tincidunt id. Sed id semper risus in hendrerit gravida rutrum quisque. Sed id semper risus in hendrerit. Ultricies mi eget mauris pharetra et ultrices neque ornare. Non enim praesent elementum facilisis. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus. Fermentum et sollicitudin ac orci phasellus. Dui nunc mattis enim ut tellus elementum sagittis vitae. Vitae turpis massa sed elementum tempus egestas. Euismod lacinia at quis risus sed vulputate odio. Sit amet purus gravida quis blandit turpis. Egestas erat imperdiet sed euismod nisi porta lorem. Euismod quis viverra nibh cras pulvinar mattis nunc. Nulla porttitor massa id neque aliquam. Egestas egestas fringilla phasellus faucibus scelerisque eleifend.</p>
-    <p>Curabitur vitae nunc sed velit dignissim. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Duis ut diam quam nulla porttitor massa id neque aliquam. Lectus urna duis convallis convallis tellus id interdum. Amet porttitor eget dolor morbi non arcu risus quis. Facilisis volutpat est velit egestas dui id ornare arcu odio. Feugiat in ante metus dictum. Ac tincidunt vitae semper quis lectus nulla at. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Tortor vitae purus faucibus ornare suspendisse. Vitae tortor condimentum lacinia quis vel eros. Nulla malesuada pellentesque elit eget gravida cum sociis natoque. Et malesuada fames ac turpis. Arcu cursus euismod quis viverra nibh cras pulvinar. Suspendisse in est ante in nibh mauris cursus mattis. Leo vel fringilla est ullamcorper eget nulla facilisi. Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae.</p>
-    <p>Facilisis gravida neque convallis a cras semper auctor. Bibendum at varius vel pharetra vel turpis. Elit duis tristique sollicitudin nibh sit amet commodo nulla. Lacus luctus accumsan tortor posuere ac ut consequat. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Duis ut diam quam nulla porttitor massa id. Ac odio tempor orci dapibus ultrices in iaculis. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Enim sit amet venenatis urna. Lacus laoreet non curabitur gravida. Semper auctor neque vitae tempus quam. Volutpat odio facilisis mauris sit amet massa vitae tortor. Pellentesque elit eget gravida cum sociis natoque. Pulvinar mattis nunc sed blandit. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Eu facilisis sed odio morbi quis commodo odio aenean sed. Enim diam vulputate ut pharetra sit amet aliquam. Leo in vitae turpis massa sed elementum tempus.</p>
-    <p>Purus semper eget duis at tellus at urna condimentum mattis. Vitae justo eget magna fermentum iaculis eu non. Urna et pharetra pharetra massa massa. At tellus at urna condimentum mattis pellentesque id nibh. Id aliquet risus feugiat in ante. Enim facilisis gravida neque convallis a cras semper auctor neque. At erat pellentesque adipiscing commodo elit. Fringilla est ullamcorper eget nulla facilisi etiam dignissim. Mattis rhoncus urna neque viverra justo nec ultrices. Convallis a cras semper auctor neque vitae tempus. Rhoncus urna neque viverra justo nec ultrices dui sapien. Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Viverra adipiscing at in tellus integer feugiat scelerisque varius. Congue quisque egestas diam in. Sed odio morbi quis commodo odio aenean. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Velit scelerisque in dictum non consectetur. In cursus turpis massa tincidunt dui ut ornare lectus sit.</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="d-flex justify-content-center" style="height:225px; background:#6c757d;">
+                <h1 style="color:rgb(255, 255, 255); margin-top:25%;">Picture</h1>
+            </div>
+            <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="d-flex justify-content-center" style="height:225px; background:#6c757d;">
+                <h1 style="color:rgb(255, 255, 255); margin-top:25%;">Picture</h1>
+            </div>
+            <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="d-flex justify-content-center" style="height:225px; background:#6c757d;">
+                <h1 style="color:rgb(255, 255, 255); margin-top:25%;">Picture</h1>
+            </div>
+            <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="d-flex justify-content-center" style="height:225px; background:#6c757d;">
+                <h1 style="color:rgb(255, 255, 255); margin-top:25%;">Picture</h1>
+            </div>
+            <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="d-flex justify-content-center" style="height:225px; background:#6c757d;">
+                <h1 style="color:rgb(255, 255, 255); margin-top:25%;">Picture</h1>
+            </div>
+            <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="d-flex justify-content-center" style="height:225px; background:#6c757d;">
+                <h1 style="color:rgb(255, 255, 255); margin-top:25%;">Picture</h1>
+            </div>
+            <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection
 
 
