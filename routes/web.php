@@ -1,12 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ClientController;
-use App\Http\Controllers\ProviderController;
-use App\Http\Controllers\FinancialController;
-use App\Http\Controllers\ShoppingController;
+
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\{
+    ProductController,
+    ClientController,
+    ProviderController,
+    FinancialController,
+    ShoppingController,
+};
 
 
 Route::get('/', function () {
@@ -26,10 +29,6 @@ Route::middleware(['auth:sanctum', 'verified'])->resource('/fornecedores', Provi
 Route::middleware(['auth:sanctum', 'verified'])->resource('/financeiro', FinancialController::class)->names('financials');
 
 Route::middleware(['auth:sanctum', 'verified'])->resource('/compras', ShoppingController::class)->names('shoppings');
-
-Route::middleware(['auth:sanctum', 'verified'])->middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
 Route::get('login/github', [LoginController::class, 'redirectToProvider']);
 
