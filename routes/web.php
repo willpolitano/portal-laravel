@@ -6,6 +6,8 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\ShoppingController;
+use App\Http\Controllers\Auth\LoginController;
+
 
 Route::get('/', function () {
     return redirect('/home');
@@ -28,3 +30,7 @@ Route::middleware(['auth:sanctum', 'verified'])->resource('/compras', ShoppingCo
 Route::middleware(['auth:sanctum', 'verified'])->middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('login/github', [LoginController::class, 'redirectToProvider']);
+
+Route::get('login/github/callback', [LoginController::class, 'handleProviderCallback']);
