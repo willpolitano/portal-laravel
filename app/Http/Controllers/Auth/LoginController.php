@@ -15,7 +15,7 @@ class LoginController extends Controller
      */
     public function redirectToProvider()
     {
-        return Socialite::driver('github')->redirect();
+        return Socialite::driver('github')->stateless()->redirect();
     }
 
     /**
@@ -25,7 +25,7 @@ class LoginController extends Controller
      */
     public function handleProviderCallback()
     {
-        $githubUser = Socialite::driver('github')->user();
+        $githubUser = Socialite::driver('github')->stateless()->user();
 
         // create a new user in our database
         $user = User::firstOrCreate(
